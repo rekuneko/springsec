@@ -22,6 +22,8 @@ public class User implements UserDetails {
 
     private String role;
 
+
+
     public Integer getId() {
         return id;
     }
