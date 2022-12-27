@@ -1,18 +1,22 @@
 package com.sevensevengsi.springsec.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "borrower")
+@Table(name = "borrower", schema = "public")
 public class Borrower extends User{
 
     @Id
+    @Column(name = "id")
     private Integer id;
 
+    @Column(name = "full_name")
     private String fullName;
 
+    @Column(name = "birthday")
     private String birthday;
 
     @Override

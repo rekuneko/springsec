@@ -1,18 +1,22 @@
 package com.sevensevengsi.springsec.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "lender_shop")
+@Table(name = "lender_shop", schema = "public")
 public class LenderShop {
 
     @Id
+    @Column(name = "id")
     private Integer id;
 
+    @Column(name = "name")
     private String name;
 
+    @Column(name = "owner_name")
     private String ownerName;
 
     public Integer getId() {

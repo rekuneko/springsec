@@ -1,18 +1,22 @@
 package com.sevensevengsi.springsec.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "admin")
+@Table(name = "admin", schema = "public")
 public class Admin extends User {
 
     @Id
+    @Column(name = "id")
     private Integer id;
 
+    @Column(name = "username")
     private String username;
 
+    @Column(name = "password")
     private String password;
 
     @Override

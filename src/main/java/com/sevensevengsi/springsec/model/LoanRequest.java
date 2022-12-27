@@ -1,12 +1,13 @@
 package com.sevensevengsi.springsec.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.criteria.CriteriaBuilder;
 
 @Entity
-@Table(name = "loan_request")
+@Table(name = "loan_request", schema = "public")
 public class LoanRequest {
 
     public Integer getId() {
@@ -74,19 +75,27 @@ public class LoanRequest {
     }
 
     @Id
+    @Column(name = "id")
     private Integer id;
 
+    @Column(name = "borrower_id")
     private Integer borrowerId;
 
+    @Column(name = "amount")
     private Integer amount;
 
+    @Column(name = "term_rate_id")
     private Integer termRateId;
 
+    @Column(name = "status_id")
     private Integer statusId;
 
+    @Column(name = "store_id")
     private Integer storeId;
 
+    @Column(name = "manager_id")
     private Integer managerId;
 
+    @Column(name = "remarks")
     private String remarks;
 }
